@@ -7,14 +7,14 @@ import re
 
 app = FastAPI()
 
-# Allow requests from http://localhost:8000
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8000"],
+    allow_origins=["http://localhost:8000", "http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
+
 
 # Define Google Cloud Vision credentials as a dictionary
 credentials = {
